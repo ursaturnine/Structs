@@ -18,7 +18,7 @@ type person struct {
 
 // Create a value of type, person
 func main() {
-	Isaac := person{
+	isaac := person{
 		firstName: "Isaac",
 		lastName:  "Clarke",
 		contactInfo: contactInfo{
@@ -31,9 +31,13 @@ func main() {
 	// IsaacPointer points to the address
 	// in memory of the variable, Isaac
 	// | 8934 | {firstName: "Isaac"}
-	IsaacPointer := &Isaac
-	IsaacPointer.updateName("Bunny")
-	Isaac.print()
+	// IsaacPointer := &Isaac
+
+	// this is a shortcut for pointers
+	// now *person, or, type person w/ access to a value in memmory,
+	// will either use, "isaac" or the value of isaac
+	isaac.updateName("Bunny")
+	isaac.print()
 }
 
 // update name
